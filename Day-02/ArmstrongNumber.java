@@ -4,11 +4,12 @@ class Main {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
         int original=n;
+        int power=String.valueOf(n).length();
         int digit;
         int sum=0;
         while(n!=0){
             digit=n%10;
-            sum=sum+digit*digit*digit;
+            sum=sum+(int)Math.pow(digit,power);
             n=n/10;
         }
         if(original==sum){
@@ -17,5 +18,5 @@ class Main {
         else{
             System.out.print("Not armstrong");
         }
-    }
+}
 }
